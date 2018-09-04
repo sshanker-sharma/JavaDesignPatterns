@@ -3,34 +3,37 @@ package com.sss.learning.designpatterns.builder;
 public class PhoneBuilder {
 	Phone phone;
 
-	public Phone setMake(String make) {
-		phone.setMake(make);
-		return phone;
-	}
-	public Phone setYearOfManufacturing(int yearOfManufacturing) {
-		phone.setYearOfManufacturing(yearOfManufacturing);
-		return phone;
-	}
-	public Phone setWeight(String weight) {
-		phone.setWeight(weight);
-		return phone;
-	}
-	public Phone setModelNumber(String modelNumber) {
-		phone.setModelNumber(modelNumber);
-		return phone;
-	}
-	public Phone setOsType(String osType) {
-		phone.setOsType(osType);
-		return phone;
-	}
-	public Phone setOsVersion(String osVersion) {
-		phone.setOsVersion(osVersion);
-		return phone;
+	public PhoneBuilder() {
+		phone=new Phone();
 	}
 	
+	public PhoneBuilder setMake(String make) {
+		phone.setMake(make);
+		return this;
+	}
+	public PhoneBuilder setYearOfManufacturing(int yearOfManufacturing) {
+		phone.setYearOfManufacturing(yearOfManufacturing);
+		return this;
+	}
+	public PhoneBuilder setWeight(String weight) {
+		phone.setWeight(weight);
+		return this;
+	}
+	public PhoneBuilder setModelNumber(String modelNumber) {
+		phone.setModelNumber(modelNumber);
+		return this;
+	}
+	public PhoneBuilder setOsType(String osType) {
+		phone.setOsType(osType);
+		return this;
+	}
+	public PhoneBuilder setOsVersion(String osVersion) {
+		phone.setOsVersion(osVersion);
+		return this;
+	}
 	
 	public Phone getPhone() {
-		return new Phone(phone.getMake(), phone.getYearOfManufacturing(), phone.getWeight(), phone.getModelNumber(), phone.getOsType(), phone.getOsVersion());
+		return phone;
 	}
 
 }

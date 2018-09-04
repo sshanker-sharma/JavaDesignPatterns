@@ -10,18 +10,6 @@ public class Phone {
 	String osVersion;
 	
 	
-	
-	public Phone(String make, int yearOfManufacturing, String weight, String modelNumber, String osType,
-			String osVersion) {
-		super();
-		this.make = make;
-		this.yearOfManufacturing = yearOfManufacturing;
-		this.weight = weight;
-		this.modelNumber = modelNumber;
-		this.osType = osType;
-		this.osVersion = osVersion;
-	}
-	
 	public String getMake() {
 		return make;
 	}
